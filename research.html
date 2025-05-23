@@ -287,7 +287,7 @@ Reproducing folded sheets with only dihedral potentials
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><strong>Year</strong>: 2020</p>
-<p><strong>Project description</strong>: This toy project was inspired by protein folding. Coarse-grained (CG) protein networks are commonly represented by C<span class="math inline">\(\alpha\)</span> atom of each residue. Some CG models go beyond this representation by incorporating dihedral angles to capture detailed local conformational changes. We want to study if pure dihedrals are enough to reproduce protein folding on a CG level. This project involves two tasks. The first task is to fold a triangulated 2D lattice with both bonded and non-bonded (Lennard-Jones) potentials. For the bonded terms, the bonds and angles are rigid. The dihedrals are flexible. The second task is to reproduce the folded sheet with only dihedral potentials. The proper dihedral type and coefficients should come from iterative Boltzmann inversion (IBI). Here, I realized the folding by rigid bonds and angles, as well as harmonic dihedrals and LJ potentials. Then, I exported the dihedral distributions from the equilibrated system and implemented Boltzmann inversion to calculate proper dihedral potentials necessary for the system to remain folded after all other potentials being removed. This process was performed iteratively. The sheet could largely remain the initial folded shape with only the dihedral potentials calculated from IBI. Both fourier type and tabulated dihedrals were tested.</p>
+<p><strong>Project description</strong>: This toy project was inspired by protein folding. Coarse-grained (CG) protein networks are commonly represented by C<span class="math inline">\(\alpha\)</span> atom of each residue. Some CG models go beyond this representation by incorporating dihedral angles to capture detailed local conformational changes. We want to study if pure diherals are enough to reproduce protein folding on a CG level. This project involves two tasks. The first task is to fold a triangulated 2D lattice with both bonded and non-bonded (Lennard-Jones) potentials. For the bonded terms, the bonds and angles are rigid. The dihedrals are flexible. The second task is to reproduce the folded sheet with only dihedral potentials. The proper dihedral type and coefficients should come from iterative Boltzmann inversion (IBI). Here, I realized the folding by rigid bonds and angles, as well as harmonic dihedrals and LJ potentials. Then, I exported the dihedral distributions from the equilibrated system and implemented Boltzmann inversion to calculate proper dihedral potentials necessary for the system to remain folded after all other potentials being removed. This process was performed iteratively. The sheet could largely remain the initial folded shape with only the dihedral potentials calculated from IBI. Both fourier type and tabulated dihedrals were tested.</p>
 <p><strong>Remarks</strong>: molecular dynamics simulations (LAMMPS), iterative Boltzmann inversion (IBI), Python (pandas, lmfit, MDAnalysis).</p>
 <table class="table-borderless table">
 <caption></caption>
@@ -306,8 +306,40 @@ Reproducing folded sheets with only dihedral potentials
 </div>
 </div>
 <!-- FEA -->
-<div class="callout callout-style-simple callout-none no-icon callout-titled" title="FEM and data-driven analysis in investigating thermal conductivity of heterogeneous material [COURSE]">
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="FEM simulation of the sheet blanking process [COURSE]">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+FEM simulation of the sheet blanking process [COURSE]
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Year</strong>: 2020</p>
+<p><strong>Project description</strong>: This is the course project of Advanced Finite Element Methods 1 at Northwestern. In this project, an analysis of the blanking of sheet metal (stainless steel X30Cr13) for punching holes are performed. Simulations with different clearances and punch radii are conducted. The material behaviour is modeled using the gradient enhanced elasto-plastic damage model. The blanking process is split in two steps, namely, clamping and punching. In the punching step, it shows in the simulation results that crack initiates in the metal sheet at the punch rounded edge (for smaller clearances) or the middle of the sheet (large clearances) and then propagates through the entire sheet causing the material to fail. Different crack evolution patterns are discussed with respect to different clearances. Also, the maximum punch force and the punch penetration depth into the sheet are studied. The trend of increasing. ductility with decreasing clearance can be observed. This phenomenon is expected to be more clear if the same sets of mesh and element deletion parameters are used for all clearances. Here, different parameters are applied because of the numerical convergence problem raised in models with the same sets of mesh and element deletion parameters. This can also be solved by doing the explicit dynamics simulation instead. In the end, simulation results in this project are compared with Mediavilla Vara’s simulation results and the experiments. To make the results in this project more close to those in the references, more sophisticated mesh algorithms should be used.</p>
+<p><strong>Remarks</strong>: FEA (Abaqus).</p>
+<table class="table-borderless table">
+<caption></caption>
+<colgroup>
+<col style="width: 45%">
+<col style="width: 55%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="pics/FEM/setup.png" class="img-fluid"> <br> Blanking setup</td>
+<td style="text-align: center;"><img src="pics/FEM/sheet.gif" class="img-fluid"> <br> Sheet blanking FEM simulation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- FEA -->
+<div class="callout callout-style-simple callout-none no-icon callout-titled" title="FEM and data-driven analysis in investigating thermal conductivity of heterogeneous material [COURSE]">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -316,7 +348,7 @@ FEM and data-driven analysis in investigating thermal conductivity of heterogene
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><strong>Year</strong>: 2020</p>
 <p><strong>Project description</strong>: This is the course project of Advanced Finite Element Methods 2 at Northwestern. In this project, a hybrid method combining finite element analysis and data-driven analysis was proposed to investigate the thermal conductivity of a simple checkerboard heterogeneous material. Finite element analysis (FEA) was first conducted with Abaqus to study the material heat flux distribution and effective thermal conductivity under different mesh refinements and material thermal conductivity ratios. With rich data produced by FEA, we built a heat flux model which can predict element-wise heat flux under a given material thermal conductivity ratio using principal component analysis (PCA) based data compression and feed-forward neural network (FFNN) regression in machine learning. Moreover, an effective thermal conductivity model with a trained convolutional neural network (CNN) was built to directly output the effective thermal conductivity using the Abaqus heat flux contour as the input. Both models display relatively high accuracy. Although the effective thermal conductivity can be calculated analytically with given heat flux contour, the toy project aims to practise integrating both FEM and data-driven analysis in solving engineering problems.</p>
@@ -350,7 +382,7 @@ FEM and data-driven analysis in investigating thermal conductivity of heterogene
 <li id="fn2"><p>Yang, X., &amp; Keten, S. (2023). Emergent elasticity relations for networks of bars with sticky magnetic ends. Extreme Mechanics Letters, 65, 102093.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Yang, X., Leng, J., Sun, C., &amp; Keten, S. (2025). Highly ordered 2D open lattices through self-assembly of magnetic units. Under review.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>Lin, S., Ryu, S., Tokareva, O., Gronau, G., Jacobsen, M. M., Huang, W., … &amp; Buehler, M. J. (2015). Predictive modelling-based design and experiments for synthesis and spinning of bioinspired silk fibres. Nature communications, 6(1), 6892.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>Graham, J., Subramani, S., Yang, X., Zhang, F., and Keten, S. (2025). Charting the envelope of mechanical properties of synthetic silk fibers through predictive modeling of the drawing process. Science Advances (Accepted).<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Graham, J., Subramani, S., Yang, X., Zhang, F., and Keten, S. (2025). Charting the envelope of mechanical properties of synthetic silk fibers through predictive modeling of the drawing process. Science Advances 11, eadr3833.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p>Yang, X., &amp; Keten, S. (2021). Multi-stability property of magneto-Kresling truss structures. Journal of Applied Mechanics, 88(9), 091009.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
